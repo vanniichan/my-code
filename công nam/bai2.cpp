@@ -1,8 +1,8 @@
 #include<stdio.h>
-#include<stdlib.h>
-void nhapmang(int &n,int a[]){
-	int i;scanf("%d",&n);
-	for(i=0;i<n;i++){
+
+void nhapmang(int *n,int a[]){
+	int i;scanf("%d",n);
+	for(i=0;i<*n;i++){
 		scanf("%d",&a[i]);
 	}
 }
@@ -51,6 +51,7 @@ void sortandout(int n,int a[]){
 	for(i=0;i<n;i++){
 		printf("%d ",a[i]);
 	}
+	printf("\n");
 }
 void menu(){
 	printf(" 1.	Input N and array of integer numbers \n 2.	Find the largest even negative number \n 3.	Calculate total of the ODD numbers \n 4.	Calculate  greatest common divisor of all array members \n 5.	Display all elements \n 6.	Exit \n");
@@ -59,29 +60,34 @@ int main(){
 int n,a[1000];
 menu();
 int m;
+
+while(m!=6){
+printf("chose : ");
 scanf("%d",&m);
 switch (m)
 {
 case 1:
-	nhapmang(n,a);
+	nhapmang(&n,a);
 	break;
 case 2:
-nhapmang(n,a);
-    printf("%d",timkiem(n,a));
+nhapmang(&n,a);
+    printf("%d \n",timkiem(n,a));
 	break;
 case 3:
-nhapmang(n,a);
-    printf("%d",tinhtongodd(n,a));
+nhapmang(&n,a);
+    printf("%d \n",tinhtongodd(n,a));
 	break;
 case 4:
-nhapmang(n,a);
-    printf("%d",tinhgcd(n,a));
+nhapmang(&n,a);
+    printf("%d \n",tinhgcd(n,a));
 	break;
 case 5:
-nhapmang(n,a);
+nhapmang(&n,a);
 sortandout(n,a);
 break;
 default:
 	break;
 }
+}
+printf("end!");
 }
