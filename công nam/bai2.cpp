@@ -33,7 +33,7 @@ int gcd(int a,int b){
 int tinhgcd(int n,int a[]){
 	int i;int gd=a[0];
 	for(i=0;i<n;i++){
-		gd=gcd(gd,a[i]);
+		gd=gcd(gd,abs(a[i]));
 	}
 	return gd;
 }
@@ -79,7 +79,6 @@ nhapmang(n,a);
 sortandout(n,a);
 break;
 default:
-system("pause");
 	break;
 }
 }
