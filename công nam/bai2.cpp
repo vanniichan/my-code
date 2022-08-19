@@ -11,6 +11,7 @@ int timkiem(int n,int a[]){
 	for(i=0;i<n;i++){
 		if(a[i]%2==0&&a[i]>max&&a[i]<0) max=a[i];
 	}
+	if(max==-1e9) return 0;
 	return max;
 }
 int tinhtongodd(int n,int a[]){
