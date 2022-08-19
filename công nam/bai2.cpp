@@ -52,9 +52,12 @@ void sortandout(int n,int a[]){
 		printf("%d ",a[i]);
 	}
 }
+void menu(){
+	printf(" 1.	Input N and array of integer numbers \n 2.	Find the largest even negative number \n 3.	Calculate total of the ODD numbers \n 4.	Calculate  greatest common divisor of all array members \n 5.	Display all elements \n 6.	Exit \n");
+}
 int main(){
 int n,a[1000];
-
+menu();
 int m;
 scanf("%d",&m);
 switch (m)
